@@ -173,7 +173,7 @@ const Footer = () => {
       </FooterContent>
 
       <Copyright>
-        © {new Date().getFullYear()} Mamma V's made with love by Manu
+        Made with ❤️ by Manu © {new Date().getFullYear()} Mamma V's All Rights Reserved
       </Copyright>
     </FooterContainer>
   );

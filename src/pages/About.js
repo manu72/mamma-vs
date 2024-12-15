@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import Modal from '../components/Modal';
 
 const AboutSection = styled.section`
   padding: 120px 2rem;
@@ -47,6 +49,13 @@ const ChefImage = styled.img`
   object-fit: cover;
   margin-bottom: 1.5rem;
   border: 3px solid ${({ theme }) => theme.colors.gold};
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: ${({ theme }) => theme.colors.light};
+  }
 `;
 
 const ChefName = styled.h3`
@@ -67,6 +76,12 @@ const ChefBio = styled.p`
 `;
 
 const About = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+  };
+
   const chefs = [
     {
       name: "Mamma V",
@@ -114,7 +129,11 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              <ChefImage src={chef.image} alt={chef.name} />
+              <ChefImage 
+                src={chef.image} 
+                alt={chef.name} 
+                onClick={() => handleImageClick(chef.image)}
+              />
               <ChefName>{chef.name}</ChefName>
               <ChefTitle>{chef.title}</ChefTitle>
               <ChefBio>{chef.bio}</ChefBio>
@@ -122,6 +141,12 @@ const About = () => {
           ))}
         </ChefGrid>
       </Container>
+      <Modal
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage}
+        alt="Chef portrait"
+      />
     </AboutSection>
   );
 };

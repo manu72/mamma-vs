@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaWineGlassAlt, FaWineBottle } from 'react-icons/fa';
 import { useState } from 'react';
+import Modal from '../components/Modal';
 
 const MenuSection = styled.section`
   padding: 120px 2rem;
@@ -53,6 +54,12 @@ const DishImage = styled.img`
   object-fit: cover;
   border-radius: 8px 8px 0 0;
   margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const DishCard = styled(motion.div)`
@@ -143,6 +150,12 @@ const WineImage = styled.img`
   height: 120px;
   object-fit: cover;
   border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const WineContent = styled.div`
@@ -186,41 +199,9 @@ const getImagePath = (imageName) => {
   return `${process.env.PUBLIC_URL}/images/${imageName}`;
 };
 
-const DishImageWithFallback = ({ src, alt }) => {
-  const [imageError, setImageError] = useState(false);
-
-  const handleError = () => {
-    setImageError(true);
-  };
-
-  return (
-    <DishImage
-      src={imageError ? `${process.env.PUBLIC_URL}/images/pasta-meal-unsplash.jpg` : src}
-      alt={alt}
-      onError={handleError}
-      loading="lazy"
-    />
-  );
-};
-
-const WineImageWithFallback = ({ src, alt }) => {
-  const [imageError, setImageError] = useState(false);
-
-  const handleError = () => {
-    setImageError(true);
-  };
-
-  return (
-    <WineImage
-      src={imageError ? `${process.env.PUBLIC_URL}/images/wine-fallback.jpg` : src}
-      alt={alt}
-      onError={handleError}
-      loading="lazy"
-    />
-  );
-};
-
 const Menu = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const menuCategories = [
     {
       name: "Antipasti",
@@ -397,6 +378,46 @@ const Menu = () => {
     ]
   };
 
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+  };
+
+  const DishImageWithFallback = ({ src, alt }) => {
+    const [imageError, setImageError] = useState(false);
+
+    const handleError = () => {
+      setImageError(true);
+    };
+
+    return (
+      <DishImage
+        src={imageError ? `${process.env.PUBLIC_URL}/images/pasta-meal-unsplash.jpg` : src}
+        alt={alt}
+        onError={handleError}
+        loading="lazy"
+        onClick={() => handleImageClick(imageError ? `${process.env.PUBLIC_URL}/images/pasta-meal-unsplash.jpg` : src)}
+      />
+    );
+  };
+
+  const WineImageWithFallback = ({ src, alt }) => {
+    const [imageError, setImageError] = useState(false);
+
+    const handleError = () => {
+      setImageError(true);
+    };
+
+    return (
+      <WineImage
+        src={imageError ? `${process.env.PUBLIC_URL}/images/wine-fallback.jpg` : src}
+        alt={alt}
+        onError={handleError}
+        loading="lazy"
+        onClick={() => handleImageClick(imageError ? `${process.env.PUBLIC_URL}/images/wine-fallback.jpg` : src)}
+      />
+    );
+  };
+
   return (
     <MenuSection>
       <Container>
@@ -521,6 +542,12 @@ const Menu = () => {
           </WineCategories>
         </WineSection>
       </Container>
+      <Modal
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage}
+        alt="Selected dish or wine"
+      />
     </MenuSection>
   );
 };
