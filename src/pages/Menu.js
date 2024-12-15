@@ -183,7 +183,7 @@ const WinePrice = styled.span`
 `;
 
 const getImagePath = (imageName) => {
-  return `/images/${imageName}`;
+  return `${process.env.PUBLIC_URL}/images/${imageName}`;
 };
 
 const DishImageWithFallback = ({ src, alt }) => {
@@ -195,7 +195,7 @@ const DishImageWithFallback = ({ src, alt }) => {
 
   return (
     <DishImage
-      src={imageError ? '/images/pasta-meal-unsplash.jpg' : src}
+      src={imageError ? `${process.env.PUBLIC_URL}/images/pasta-meal-unsplash.jpg` : src}
       alt={alt}
       onError={handleError}
       loading="lazy"
@@ -212,7 +212,7 @@ const WineImageWithFallback = ({ src, alt }) => {
 
   return (
     <WineImage
-      src={imageError ? '/images/wine-fallback.jpg' : src}
+      src={imageError ? `${process.env.PUBLIC_URL}/images/wine-fallback.jpg` : src}
       alt={alt}
       onError={handleError}
       loading="lazy"

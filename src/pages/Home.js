@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const HeroSection = styled.section`
   height: 100vh;
-  background-image: url('/images/hero-bg.jpg');
+  background-image: url(${process.env.PUBLIC_URL}/images/hero-bg.jpg);
   background-size: cover;
   background-position: center;
   display: flex;

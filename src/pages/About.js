@@ -71,19 +71,19 @@ const About = () => {
     {
       name: "Mamma V",
       title: "Executive Chef",
-      image: "/images/chef1.jpg",
+      image: `${process.env.PUBLIC_URL}/images/chef1.jpg`,
       bio: "With over 20 years of experience in fine dining, Chef Mamma V brings her passion for Italian cuisine and innovative cooking techniques to The Rosa."
     },
     {
       name: "Olivia Vigilanti",
       title: "Pastry Chef",
-      image: "/images/chef2.jpg",
+      image: `${process.env.PUBLIC_URL}/images/chef2.jpg`,
       bio: "A master of French pastry, Olivia creates desserts that are both visually stunning and extraordinarily delicious."
     },
     {
       name: "Dean Ambrosini",
       title: "Sous Chef",
-      image: "/images/chef3.jpg",
+      image: `${process.env.PUBLIC_URL}/images/chef3.jpg`,
       bio: "Specialising in fusion cuisine, Dean combines Asian and European flavors to create unique and memorable dishes."
     }
   ];
