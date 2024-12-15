@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/mamma-vs/static/js/main.68140977.js",
+    "main.js": "/mamma-vs/static/js/main.ae68c9c9.js",
     "static/js/453.a8b2d084.chunk.js": "/mamma-vs/static/js/453.a8b2d084.chunk.js",
     "index.html": "/mamma-vs/index.html",
-    "main.68140977.js.map": "/mamma-vs/static/js/main.68140977.js.map",
+    "main.ae68c9c9.js.map": "/mamma-vs/static/js/main.ae68c9c9.js.map",
     "453.a8b2d084.chunk.js.map": "/mamma-vs/static/js/453.a8b2d084.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.68140977.js"
+    "static/js/main.ae68c9c9.js"
   ]
 }
