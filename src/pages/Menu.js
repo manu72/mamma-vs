@@ -214,13 +214,13 @@ const Menu = () => {
         },
         {
           name: "Carpaccio di Manzo",
-          description: "Thinly sliced raw beef with arugula, shaved Parmigiano-Reggiano, and truffle oil",
+          description: "Thinly sliced vegan raw beef with arugula, shaved Parmigiano-Reggiano, and truffle oil",
           price: "$22",
           image: getImagePath('carpaccio.jpg')
         },
         {
           name: "Calamari Fritti",
-          description: "Crispy fried calamari served with house-made marinara sauce and lemon",
+          description: "Crispy fried vegan calamari served with house-made marinara sauce and lemon",
           price: "$19",
           image: getImagePath('calamari.jpg')
         }
@@ -231,7 +231,7 @@ const Menu = () => {
       dishes: [
         {
           name: "Tagliatelle al Ragù",
-          description: "Fresh egg pasta with traditional Bolognese meat sauce and Parmigiano-Reggiano",
+          description: "Fresh egg pasta with traditional Bolognese sauce and Parmigiano-Reggiano",
           price: "$28",
           image: getImagePath('tagliatelle.jpg')
         },
@@ -254,13 +254,13 @@ const Menu = () => {
       dishes: [
         {
           name: "Osso Buco alla Milanese",
-          description: "Braised veal shank with saffron risotto and gremolata",
+          description: "Braised vegan veal shank with saffron risotto and gremolata",
           price: "$42",
           image: getImagePath('ossobuco.jpg')
         },
         {
           name: "Branzino al Forno",
-          description: "Whole roasted Mediterranean sea bass with herbs, lemon, and roasted vegetables",
+          description: "Whole roasted Mediterranean faux sea bass with herbs, lemon, and roasted vegetables",
           price: "$38",
           image: getImagePath('branzino.jpg')
         },
