@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const FooterContainer = styled.footer`
   background: ${({ theme }) => theme.colors.dark};
@@ -113,17 +113,30 @@ const Footer = () => {
         <FooterSection>
           <FooterTitle>About Mamma V's</FooterTitle>
           <FooterText>
-            Experience fine dining at its best. Our commitment to quality ingredients
-            and exceptional service has made us a premier dining destination since 1995.
+            Experience fine dining at its best. Our commitment to quality
+            ingredients and exceptional service has made us a premier dining
+            destination since 1995.
           </FooterText>
           <SocialLinks>
-            <SocialIcon href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <SocialIcon
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF />
             </SocialIcon>
-            <SocialIcon href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <SocialIcon
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </SocialIcon>
-            <SocialIcon href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <SocialIcon
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaTwitter />
             </SocialIcon>
           </SocialLinks>
@@ -141,17 +154,22 @@ const Footer = () => {
         <FooterSection>
           <FooterTitle>Contact Info</FooterTitle>
           <FooterText>
-            175 Nelson Place<br />
+            175 Nelson Place
+            <br />
             Williamstown, Victoria 3016
           </FooterText>
           <FooterText>
-            Phone: +61 444 999 678<br />
+            Phone: +61 444 999 678
+            <br />
             Email: info@mammavs.com
           </FooterText>
           <FooterText>
-            <strong>Hours:</strong><br />
-            Mon-Thu: 5:00 PM - 10:00 PM<br />
-            Fri-Sat: 5:00 PM - 11:00 PM<br />
+            <strong>Hours:</strong>
+            <br />
+            Mon-Thu: 5:00 PM - 10:00 PM
+            <br />
+            Fri-Sat: 5:00 PM - 11:00 PM
+            <br />
             Sun: 5:00 PM - 9:00 PM
           </FooterText>
         </FooterSection>
@@ -159,7 +177,8 @@ const Footer = () => {
         <FooterSection>
           <FooterTitle>Newsletter</FooterTitle>
           <FooterText>
-            Subscribe to our newsletter for updates, special offers, and culinary insights.
+            Subscribe to our newsletter for updates, special offers, and
+            culinary insights.
           </FooterText>
           <NewsletterForm onSubmit={handleNewsletterSubmit}>
             <NewsletterInput
@@ -172,11 +191,9 @@ const Footer = () => {
         </FooterSection>
       </FooterContent>
 
-      <Copyright>
-        Made with ❤️ by Manu ©{new Date().getFullYear()}
-      </Copyright>
+      <Copyright>Made with ❤️ by Manu ©{new Date().getFullYear()}</Copyright>
     </FooterContainer>
   );
 };
 
-export default Footer; 
+export default Footer;

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const BookingsSection = styled.section`
   padding: 120px 2rem;
@@ -128,8 +128,8 @@ const Bookings = () => {
         >
           <Title>Make a Reservation</Title>
           <Description>
-            Join us for an unforgettable dining experience. Please fill out the form below
-            to make your reservation.
+            Join us for an unforgettable dining experience. Please fill out the
+            form below to make your reservation.
           </Description>
         </BookingHeader>
 
@@ -192,7 +192,7 @@ const Bookings = () => {
 
           <FormGroup>
             <Label>Special Requests</Label>
-            <TextArea 
+            <TextArea
               placeholder="Any special requests or dietary requirements?"
               rows="4"
             />
@@ -205,4 +205,4 @@ const Bookings = () => {
   );
 };
 
-export default Bookings; 
+export default Bookings;
