@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 
 const ContactSection = styled.section`
   padding: 120px 2rem;
@@ -197,7 +197,8 @@ const Contact = () => {
             </IconWrapper>
             <ContactTitle>Location</ContactTitle>
             <ContactInfo>
-              175 Nelson Place<br />
+              175 Nelson Place
+              <br />
               Williamstown, VIC 3016
             </ContactInfo>
           </ContactCard>
@@ -212,8 +213,10 @@ const Contact = () => {
             </IconWrapper>
             <ContactTitle>Hours</ContactTitle>
             <ContactInfo>
-              Mon-Thu: 5:00 PM - 10:00 PM<br />
-              Fri-Sat: 5:00 PM - 11:00 PM<br />
+              Mon-Thu: 5:00 PM - 10:00 PM
+              <br />
+              Fri-Sat: 5:00 PM - 11:00 PM
+              <br />
               Sun: 5:00 PM - 9:00 PM
             </ContactInfo>
           </ContactCard>
@@ -269,4 +272,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
