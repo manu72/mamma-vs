@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -12,7 +12,7 @@ const HeroSection = styled.section`
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -65,8 +65,9 @@ const Home = () => {
           <Welcome>Welcome to</Welcome>
           <Title>MAMMA V'S</Title>
           <Subtitle>
-            Experience authentic Italian fine dining at its best. Fresh ingredients, traditional recipes, 
-            and an atmosphere that will transport you to Italy.
+            Experience authentic Italian fine dining at its best. Fresh
+            ingredients, traditional recipes, and an atmosphere that will
+            transport you to Italy.
           </Subtitle>
         </HeroContent>
       </HeroSection>
@@ -74,4 +75,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;
