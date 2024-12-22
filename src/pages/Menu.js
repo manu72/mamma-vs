@@ -275,7 +275,7 @@ const Menu = () => {
         {
           name: "Vitello alla Saltimbocca",
           description:
-            "Veal scaloppine with prosciutto and sage in white wine sauce",
+            "Vegan veal scaloppine with prosciutto and sage in white wine sauce",
           price: "$36",
           image: getImagePath("vitello.jpg"),
         },
