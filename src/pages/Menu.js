@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { FaWineGlassAlt, FaWineBottle } from 'react-icons/fa';
-import { useState } from 'react';
-import Modal from '../components/Modal';
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { FaWineGlassAlt, FaWineBottle } from "react-icons/fa";
+import { useState } from "react";
+import Modal from "../components/Modal";
 
 const MenuSection = styled.section`
   padding: 120px 2rem;
@@ -208,130 +208,144 @@ const Menu = () => {
       dishes: [
         {
           name: "Bruschetta al Pomodoro",
-          description: "Grilled Tuscan bread topped with fresh tomatoes, basil, garlic, and extra virgin olive oil",
+          description:
+            "Grilled Tuscan bread topped with fresh tomatoes, basil, garlic, and extra virgin olive oil",
           price: "$16",
-          image: getImagePath('bruschetta.jpg')
+          image: getImagePath("bruschetta.jpg"),
         },
         {
           name: "Carpaccio di Manzo",
-          description: "Thinly sliced vegan raw beef with arugula, shaved Parmigiano-Reggiano, and truffle oil",
+          description:
+            "Thinly sliced vegan raw beef with arugula, shaved Parmigiano-Reggiano, and truffle oil",
           price: "$22",
-          image: getImagePath('carpaccio.jpg')
+          image: getImagePath("carpaccio.jpg"),
         },
         {
           name: "Calamari Fritti",
-          description: "Crispy fried vegan calamari served with house-made marinara sauce and lemon",
+          description:
+            "Crispy fried vegan calamari served with house-made marinara sauce and lemon",
           price: "$19",
-          image: getImagePath('calamari.jpg')
-        }
-      ]
+          image: getImagePath("calamari.jpg"),
+        },
+      ],
     },
     {
       name: "Primi Piatti",
       dishes: [
         {
           name: "Tagliatelle al Ragù",
-          description: "Fresh egg pasta with traditional Bolognese sauce and Parmigiano-Reggiano",
+          description:
+            "Fresh egg pasta with traditional Bolognese sauce and Parmigiano-Reggiano",
           price: "$28",
-          image: getImagePath('tagliatelle.jpg')
+          image: getImagePath("tagliatelle.jpg"),
         },
         {
           name: "Risotto ai Funghi Porcini",
-          description: "Carnaroli rice with porcini mushrooms, white wine, and Parmigiano-Reggiano",
+          description:
+            "Carnaroli rice with porcini mushrooms, white wine, and Parmigiano-Reggiano",
           price: "$32",
-          image: getImagePath('risotto.jpg')
+          image: getImagePath("risotto.jpg"),
         },
         {
           name: "Ravioli di Zucca",
-          description: "Handmade pumpkin ravioli with sage butter sauce and amaretti crumbs",
+          description:
+            "Handmade pumpkin ravioli with sage butter sauce and amaretti crumbs",
           price: "$26",
-          image: getImagePath('ravioli.jpg')
-        }
-      ]
+          image: getImagePath("ravioli.jpg"),
+        },
+      ],
     },
     {
       name: "Secondi Piatti",
       dishes: [
         {
           name: "Osso Buco alla Milanese",
-          description: "Braised vegan veal shank with saffron risotto and gremolata",
+          description:
+            "Braised vegan veal shank with saffron risotto and gremolata",
           price: "$42",
-          image: getImagePath('ossobuco.jpg')
+          image: getImagePath("ossobuco.jpg"),
         },
         {
           name: "Branzino al Forno",
-          description: "Whole roasted Mediterranean faux sea bass with herbs, lemon, and roasted vegetables",
+          description:
+            "Whole roasted Mediterranean faux sea bass with herbs, lemon, and roasted vegetables",
           price: "$38",
-          image: getImagePath('branzino.jpg')
+          image: getImagePath("branzino.jpg"),
         },
         {
           name: "Vitello alla Saltimbocca",
-          description: "Veal scaloppine with prosciutto and sage in white wine sauce",
+          description:
+            "Veal scaloppine with prosciutto and sage in white wine sauce",
           price: "$36",
-          image: getImagePath('vitello.jpg')
-        }
-      ]
+          image: getImagePath("vitello.jpg"),
+        },
+      ],
     },
     {
       name: "Dolci",
       dishes: [
         {
           name: "Tiramisù Classico",
-          description: "Traditional tiramisu with mascarpone, espresso, and cocoa",
+          description:
+            "Traditional tiramisu with mascarpone, espresso, and cocoa",
           price: "$14",
-          image: getImagePath('tiramisu.jpg')
+          image: getImagePath("tiramisu.jpg"),
         },
         {
           name: "Panna Cotta ai Frutti di Bosco",
           description: "Vanilla bean panna cotta with mixed berry compote",
           price: "$12",
-          image: getImagePath('pannacotta.jpg')
+          image: getImagePath("pannacotta.jpg"),
         },
         {
           name: "Cannoli Siciliani",
-          description: "Crispy pastry tubes filled with sweet ricotta, pistachios, and chocolate chips",
+          description:
+            "Crispy pastry tubes filled with sweet ricotta, pistachios, and chocolate chips",
           price: "$13",
-          image: getImagePath('cannoli.jpg')
-        }
-      ]
-    }
+          image: getImagePath("cannoli.jpg"),
+        },
+      ],
+    },
   ];
 
   const wineList = {
     redWines: [
-    {
+      {
         name: "Barolo",
         region: "Piedmont",
         description: "Noble red wine with aromas of rose, tar, and dried herbs",
         glass: "26",
         bottle: "130",
-        image: getImagePath('barolo.jpg')
-        },
-    {
+        image: getImagePath("barolo.jpg"),
+      },
+      {
         name: "Amarone della Valpolicella Classico",
         region: "Veneto",
-        description: "Full-bodied red with rich flavors of dark cherry, chocolate, and spice",
+        description:
+          "Full-bodied red with rich flavors of dark cherry, chocolate, and spice",
         glass: "22",
         bottle: "110",
-        image: getImagePath('amarone.jpg')
-    },
+        image: getImagePath("amarone.jpg"),
+      },
       {
         name: "Brunello di Montalcino",
         region: "Tuscany",
-        description: "Elegant and complex with notes of dark fruits, leather, and tobacco",
+        description:
+          "Elegant and complex with notes of dark fruits, leather, and tobacco",
         glass: "24",
         bottle: "120",
-        image: getImagePath('brunello.jpg')
-      }
+        image: getImagePath("brunello.jpg"),
+      },
     ],
     whiteWines: [
       {
         name: "Gavi di Gavi",
         region: "Piedmont",
-        description: "Crisp and refreshing with notes of citrus, almonds, and white flowers",
+        description:
+          "Crisp and refreshing with notes of citrus, almonds, and white flowers",
         glass: "16",
         bottle: "75",
-        image: getImagePath('gavi.jpg')
+        image: getImagePath("gavi.jpg"),
       },
       {
         name: "Verdicchio dei Castelli di Jesi",
@@ -339,43 +353,47 @@ const Menu = () => {
         description: "Medium-bodied with fresh apple, citrus, and almond notes",
         glass: "14",
         bottle: "65",
-        image: getImagePath('verdicchio.jpg')
+        image: getImagePath("verdicchio.jpg"),
       },
       {
         name: "Pinot Grigio Alto Adige",
         region: "Trentino-Alto Adige",
-        description: "Elegant, clean and mineral-driven with pear and citrus flavors",
+        description:
+          "Elegant, clean and mineral-driven with pear and citrus flavors",
         glass: "15",
         bottle: "70",
-        image: getImagePath('pinot-grigio.jpg')
-      }
+        image: getImagePath("pinot-grigio.jpg"),
+      },
     ],
     sparklingWines: [
-    {
+      {
         name: "Franciacorta Brut",
         region: "Lombardy",
-        description: "Elegant sparkling wine with notes of citrus, bread crust, and almonds",
+        description:
+          "Elegant sparkling wine with notes of citrus, bread crust, and almonds",
         glass: "20",
         bottle: "95",
-        image: getImagePath('franciacorta.jpg')
-        },
-        {
+        image: getImagePath("franciacorta.jpg"),
+      },
+      {
         name: "Prosecco Superiore DOCG",
         region: "Veneto",
-        description: "Fresh and lively with notes of apple, pear, and white flowers",
+        description:
+          "Fresh and lively with notes of apple, pear, and white flowers",
         glass: "16",
         bottle: "75",
-        image: getImagePath('prosecco.jpg')
+        image: getImagePath("prosecco.jpg"),
       },
       {
         name: "Ferrari Brut Trento DOC",
         region: "Trentino",
-        description: "Classic method sparkling with fine bubbles and notes of apple and yeast",
+        description:
+          "Classic method sparkling with fine bubbles and notes of apple and yeast",
         glass: "18",
         bottle: "85",
-        image: getImagePath('ferrari-brut.jpg')
-      }
-    ]
+        image: getImagePath("ferrari-brut.jpg"),
+      },
+    ],
   };
 
   const handleImageClick = (imageSrc) => {
@@ -391,11 +409,21 @@ const Menu = () => {
 
     return (
       <DishImage
-        src={imageError ? `${process.env.PUBLIC_URL}/images/pasta-meal-unsplash.jpg` : src}
+        src={
+          imageError
+            ? `${process.env.PUBLIC_URL}/images/pasta-meal-unsplash.jpg`
+            : src
+        }
         alt={alt}
         onError={handleError}
         loading="lazy"
-        onClick={() => handleImageClick(imageError ? `${process.env.PUBLIC_URL}/images/pasta-meal-unsplash.jpg` : src)}
+        onClick={() =>
+          handleImageClick(
+            imageError
+              ? `${process.env.PUBLIC_URL}/images/pasta-meal-unsplash.jpg`
+              : src
+          )
+        }
       />
     );
   };
@@ -409,11 +437,21 @@ const Menu = () => {
 
     return (
       <WineImage
-        src={imageError ? `${process.env.PUBLIC_URL}/images/wine-fallback.jpg` : src}
+        src={
+          imageError
+            ? `${process.env.PUBLIC_URL}/images/wine-fallback.jpg`
+            : src
+        }
         alt={alt}
         onError={handleError}
         loading="lazy"
-        onClick={() => handleImageClick(imageError ? `${process.env.PUBLIC_URL}/images/wine-fallback.jpg` : src)}
+        onClick={() =>
+          handleImageClick(
+            imageError
+              ? `${process.env.PUBLIC_URL}/images/wine-fallback.jpg`
+              : src
+          )
+        }
       />
     );
   };
@@ -428,8 +466,9 @@ const Menu = () => {
         >
           <MenuTitle>Il Nostro Menu</MenuTitle>
           <MenuDescription>
-            Experience the authentic flavors of Italy with our carefully curated dishes,
-            made with the finest imported Italian ingredients and local produce.
+            Experience the authentic flavors of Italy with our carefully curated
+            dishes, made with the finest imported Italian ingredients and local
+            produce.
           </MenuDescription>
         </MenuHeader>
 
@@ -447,7 +486,10 @@ const Menu = () => {
                   key={dish.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: (index * 0.2) + (dishIndex * 0.1) }}
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.2 + dishIndex * 0.1,
+                  }}
                 >
                   <DishImageWithFallback src={dish.image} alt={dish.name} />
                   <DishContent>
@@ -469,7 +511,8 @@ const Menu = () => {
           <WineHeader>
             <MenuTitle>La Nostra Carta dei Vini</MenuTitle>
             <MenuDescription>
-              Explore our extensive selection of fine Italian wines, carefully chosen to complement your dining experience.
+              Explore our extensive selection of fine Italian wines, carefully
+              chosen to complement your dining experience.
             </MenuDescription>
           </WineHeader>
 
@@ -552,4 +595,4 @@ const Menu = () => {
   );
 };
 
-export default Menu; 
+export default Menu;

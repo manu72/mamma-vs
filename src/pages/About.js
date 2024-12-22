@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import Modal from '../components/Modal';
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import Modal from "../components/Modal";
 
 const AboutSection = styled.section`
   padding: 120px 2rem;
@@ -87,20 +87,20 @@ const About = () => {
       name: "Mamma V",
       title: "Executive Chef",
       image: `${process.env.PUBLIC_URL}/images/chef1.jpg`,
-      bio: "With over 20 years of experience in fine dining, Chef Mamma V brings her passion for Italian cuisine and innovative cooking techniques to The Rosa."
+      bio: "With over 20 years of experience in fine dining, Chef Mamma V brings her passion for Italian cuisine and innovative cooking techniques to The Rosa.",
     },
     {
       name: "Olivia Vigilanti",
       title: "Pastry Chef",
       image: `${process.env.PUBLIC_URL}/images/chef2.jpg`,
-      bio: "A master of French pastry, Olivia creates desserts that are both visually stunning and extraordinarily delicious."
+      bio: "A master of French pastry, Olivia creates desserts that are both visually stunning and extraordinarily delicious.",
     },
     {
       name: "Dean Ambrosini",
       title: "Sous Chef",
       image: `${process.env.PUBLIC_URL}/images/chef3.jpg`,
-      bio: "Specialising in fusion cuisine, Dean combines Asian and European flavors to create unique and memorable dishes."
-    }
+      bio: "Specialising in fusion cuisine, Dean combines Asian and European flavors to create unique and memorable dishes.",
+    },
   ];
 
   return (
@@ -113,10 +113,12 @@ const About = () => {
         >
           <SectionTitle>Our Story</SectionTitle>
           <StoryText>
-            Mamma V's was founded in 1995 and has been a beacon of culinary excellence for over two decades. 
-            What started as a small family restaurant has grown into one of the city's most celebrated 
-            dining destinations. Our commitment to quality ingredients, innovative cuisine, and 
-            exceptional service has remained unchanged throughout our journey.
+            Mamma V's was founded in 1995 and has been a beacon of culinary
+            excellence for over two decades. What started as a small family
+            restaurant has grown into one of the city's most celebrated dining
+            destinations. Our commitment to quality ingredients, innovative
+            cuisine, and exceptional service has remained unchanged throughout
+            our journey.
           </StoryText>
         </StorySection>
 
@@ -129,9 +131,9 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              <ChefImage 
-                src={chef.image} 
-                alt={chef.name} 
+              <ChefImage
+                src={chef.image}
+                alt={chef.name}
                 onClick={() => handleImageClick(chef.image)}
               />
               <ChefName>{chef.name}</ChefName>
@@ -151,4 +153,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;
