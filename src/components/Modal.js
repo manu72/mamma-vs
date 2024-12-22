@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaTimes } from 'react-icons/fa';
+import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaTimes } from "react-icons/fa";
 
 const ModalOverlay = styled(motion.div)`
   position: fixed;
@@ -33,7 +33,7 @@ const CloseButton = styled.button`
   cursor: pointer;
   z-index: 1001;
   padding: 0.5rem;
-  
+
   &:hover {
     color: ${({ theme }) => theme.colors.gold};
   }
@@ -80,4 +80,4 @@ const Modal = ({ isOpen, onClose, imageSrc, alt }) => {
   );
 };
 
-export default Modal; 
+export default Modal;
